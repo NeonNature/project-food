@@ -1,4 +1,7 @@
 import '../styles/intro.scss'
+import Rider from '../assets/images/intro-main.png'
+import Review from '../assets/images/intro-review.png'
+import Time from '../assets/images/intro-time.svg'
 
 interface IntroNumberProps {
   count: string
@@ -22,8 +25,8 @@ const Introduction = () => {
   return (
     <>
       <div className="section-intro">
-        <div className="row">
-          <div className="col">
+        <div className="intro-grid">
+          <div>
             <div className="intro-title">ABOUT DELIVER X</div>
             <h1 className="intro-header">
               We are here to help amazing restaurants get great customers
@@ -34,7 +37,17 @@ const Introduction = () => {
               et id sed lacinia massa pretium aliquam libero et.
             </div>
           </div>
-          <div className="col"></div>
+          <div>
+            <div className="intro-image-wrapper">
+              <img src={Rider} alt="Picture of a Rider" />
+              <div className="intro-image-review">
+                <img src={Review} alt="Picture of a food review" />
+              </div>
+              <div className="intro-image-delivery">
+                <img src={Time} alt="Picture of a scooter" />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="row">
           <div className="col">

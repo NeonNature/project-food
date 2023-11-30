@@ -49,3 +49,8 @@ body {
   font-weight: 400;
   line-height: 1.667em;
 }
+
+a:hover,
+a:active {
+  outline: 0;
+}
