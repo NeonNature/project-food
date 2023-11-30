@@ -1,0 +1,22 @@
+@use 'utilities';
+
+.mission-title {
+  @extend .content-title;
+  margin-bottom: 12px;
+}
+
+.mission-header {
+  @extend .content-header;
+}
+
+.mission-container {
+  @extend .content-container;
+}
+
+.mission-image-wrapper {
+  @extend .content-image-wrapper;
+}
+
+.mission-image {
+  @extend .content-image;
+}

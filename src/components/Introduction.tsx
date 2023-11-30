@@ -1,15 +1,33 @@
 import '../styles/intro.scss'
 
+interface IntroNumberProps {
+  count: string
+  sign: string
+  text: string
+}
+
+const IntroNumber = ({ count, sign, text }: IntroNumberProps) => {
+  return (
+    <>
+      <div className="intro-number">
+        {count}
+        <span className="intro-sign">{sign}</span>
+      </div>
+      <div className="intro-text">{text}</div>
+    </>
+  )
+}
+
 const Introduction = () => {
   return (
     <>
       <div className="section-intro">
         <div className="row">
           <div className="col">
-            <div>ABOUT DELIVER X</div>
-            <div>
+            <div className="intro-title">ABOUT DELIVER X</div>
+            <h1 className="intro-header">
               We are here to help amazing restaurants get great customers
-            </div>
+            </h1>
             <div>
               At morbi adipiscing sit sed consectetur senectus Dignissim sed
               amet tincidunt vitae ultricies ultrices amet fermentum amet neque
@@ -20,20 +38,16 @@ const Introduction = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div>10M+</div>
-            <div>Happy customers</div>
+            <IntroNumber count={'10M'} sign="+" text="Happy customers" />
           </div>
           <div className="col">
-            <div>500k+</div>
-            <div>Restaurants available</div>
+            <IntroNumber count={'500k'} sign="+" text="Restaurants available" />
           </div>
           <div className="col">
-            <div>30M+</div>
-            <div>Successful deliveries</div>
+            <IntroNumber count={'30M'} sign="+" text="Successful deliveries" />
           </div>
           <div className="col">
-            <div>99.9%</div>
-            <div>Customer satisfaction</div>
+            <IntroNumber count={'99.9'} sign="%" text="Customer satisfaction" />
           </div>
         </div>
       </div>

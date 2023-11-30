@@ -1,0 +1,51 @@
+@use 'fonts';
+
+:root {
+  --neutral--600: #656565;
+  --neutral--800: #121212;
+  --accent--primary-1: #ff5634;
+  // --secondary--color-2: #fff5f1;
+  --neutral--300: #ededed;
+  // --general--shadow-01: rgba(20, 20, 43, .06);
+  --neutral--200: #fafafa;
+  --neutral--100: white;
+  --general--shadow-02: rgba(16, 16, 16, 0.08);
+  // --general--shadow-04: rgba(16, 16, 16, .14);
+  --secondary--color-1: #e13f1f;
+  // --neutral--700: #3f3f3f;
+  // --neutral--500: #929292;
+  // --neutral--400: #cacaca;
+  // --system--green-400: #11845b;
+  // --system--blue-400: #086cd9;
+  // --system--blue-300: #1d88fe;
+  // --system--blue-200: #8fc3ff;
+  // --system--blue-100: #eaf4ff;
+  // --system--green-300: #05c168;
+  // --system--green-200: #7fdca4;
+  // --system--green-100: #def2e6;
+  // --system--red-400: #dc2b2b;
+  // --system--300: #ff5a65;
+  // --system--red-200: #ffbec2;
+  // --system--red-100: #ffeff0;
+  // --system--orange-400: #d5691b;
+  // --system--orange-300: #ff9e2c;
+  // --system--orange-200: #ffd19b;
+  // --system--orange-100: #fff3e4;
+  // --general--shadow-03: rgba(20, 20, 43, .1);
+  // --general--shadow-05: rgba(20, 20, 43, .16);
+  // --general--shadow-06: rgba(20, 20, 43, .24);
+  // --button-shadow--color-01: rgba(255, 85, 51, .06);
+  // --button-shadow--color-2: rgba(255, 85, 51, .08);
+  // --button-shadow--color-3: rgba(255, 85, 51, .08);
+  // --button-shadow--white-01: rgba(16, 16, 16, .04);
+  // --button-shadow--white-02: rgba(20, 20, 43, .06);
+  // --button-shadow--white-03: rgba(20, 20, 43, .1);
+}
+
+body {
+  color: var(--neutral--600);
+  font-family: Metropolis, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.667em;
+}

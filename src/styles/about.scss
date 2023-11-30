@@ -1,0 +1,22 @@
+@use 'utilities';
+
+.about-title {
+  @extend .content-title;
+  margin-bottom: 12px;
+}
+
+.about-header {
+  @extend .content-header;
+}
+
+.about-container {
+  @extend .content-container;
+}
+
+.about-image-wrapper {
+  @extend .content-image-wrapper;
+}
+
+.about-image {
+  @extend .content-image;
+}
