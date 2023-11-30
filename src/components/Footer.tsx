@@ -4,6 +4,11 @@ import Place1 from '../assets/images/place-1.svg'
 import Place2 from '../assets/images/place-2.svg'
 import Place3 from '../assets/images/place-3.svg'
 import Place4 from '../assets/images/place-4.svg'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLayoutEffect, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 interface PlaceCardProps {
   text: string
@@ -43,8 +48,62 @@ const ListItem = ({ text, special = false }: ListItemProps) => {
 }
 
 const Footer = () => {
+  const ref = useRef<null | HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const element = ref.current
+
+    if (element) {
+      gsap.fromTo(
+        element.querySelectorAll('.footer-top'),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector('.footer-app-btn'),
+            start: 'top center',
+            end: 'bottom top',
+          },
+        }
+      )
+
+      gsap.fromTo(
+        element.querySelectorAll('.footer-middle'),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector('.footer-top'),
+            start: 'bottom center',
+          },
+        }
+      )
+
+      gsap.fromTo(
+        element.querySelectorAll('.footer-bottom'),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector('.footer-middle'),
+            start: 'top center',
+          },
+        }
+      )
+    }
+  }, [])
+
   return (
-    <>
+    <div className="footer-bg" ref={ref}>
       <div className="footer-wrapper">
         <div className="footer-top">
           <div className="footer-grid">
@@ -149,7 +208,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,9 +1,12 @@
 @use 'utilities';
 
-.footer-wrapper {
-  @extend .content-container;
+.footer-bg {
   border-top: 1px solid var(--neutral--400);
   background-color: var(--neutral--100);
+}
+
+.footer-wrapper {
+  @extend .content-container;
   padding-block: 0;
 }
 

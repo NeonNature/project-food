@@ -3,7 +3,6 @@
 .news-container {
   @extend .content-container;
   padding: 166px 0;
-  background-color: var(--neutral--200);
 }
 
 .news-title {
@@ -39,6 +38,10 @@
     box-shadow: 0 6px 24px 0 var(--general--shadow-04);
     color: var(--neutral--600);
     transform: translate3d(0, -5px, 0.01px);
+
+    .icon {
+      transform: translate(5px, -5px);
+    }
   }
 }
 
@@ -85,6 +88,7 @@
     font-family: LineRoundedIcons, sans-serif;
     margin-left: 6px;
     display: inline-block;
+    transition: transform 0.3s;
   }
 }
 

@@ -11,6 +11,7 @@
 
 .about-container {
   @extend .content-container;
+  padding-bottom: 50px;
 }
 
 .about-image-wrapper {
@@ -19,4 +20,20 @@
 
 .about-image {
   @extend .content-image;
+}
+
+.about-grid {
+  grid-column-gap: 55px;
+  grid-template-columns: 1.05fr 1fr;
+  grid-column-gap: 28px;
+  grid-row-gap: 28px;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  display: grid;
+}
+
+.about-content {
+  justify-self: end;
+  max-width: 480px;
 }

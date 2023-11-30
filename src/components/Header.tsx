@@ -1,5 +1,10 @@
 import '../styles/header.scss'
 import Logo from '../assets/images/logo.svg'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLayoutEffect, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 interface ListItemProps {
   text: string
@@ -20,8 +25,31 @@ const ListItem = ({ text, current = false }: ListItemProps) => {
 }
 
 const Header = () => {
+  const ref = useRef<null | HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const element = ref.current
+
+    if (element) {
+      gsap.fromTo(
+        element.querySelectorAll('.header-content'),
+        {
+          opacity: 0,
+          y: -50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element.querySelector('.header-content'),
+          },
+        }
+      )
+    }
+  }, [])
   return (
-    <div className="header-wrapper">
+    <div className="header-wrapper" ref={ref}>
       <div className="header-content">
         <div className="header-grid">
           <div className="header-logo">

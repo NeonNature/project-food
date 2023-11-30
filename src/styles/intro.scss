@@ -4,7 +4,10 @@
   padding: 70px 24px 127px;
   margin: 0 auto;
   max-width: 1270px;
-  background-color: var(--neutral--200);
+}
+
+.intro-content {
+  max-width: 590px;
 }
 
 .intro-number {
@@ -83,4 +86,17 @@
     object-fit: cover;
     flex: 1;
   }
+}
+
+.intro-numbers-grid {
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  grid-row-gap: 28px;
+  grid-template-rows: auto;
+  grid-column-gap: 28px;
+  grid-auto-columns: 1fr;
+  display: grid;
+  margin-top: 100px;
+  text-align: center;
 }
