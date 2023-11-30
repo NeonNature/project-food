@@ -106,3 +106,65 @@
   cursor: pointer;
   align-items: center;
 }
+
+.header-buttons {
+  margin-left: 32px;
+  align-items: center;
+  display: flex;
+
+  a {
+    border-radius: 12px;
+    padding: 18px 24px;
+    font-size: 16px;
+    line-height: 1.125em;
+    text-decoration: none;
+    transition:
+      color 0.3s,
+      background-color 0.3s,
+      border-color 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .download {
+    margin-right: 18px;
+
+    a {
+      border: 1px solid var(--neutral--300);
+      background-color: var(--neutral--100);
+      box-shadow: 0 2px 6px 0 var(--button-shadow--white-01);
+      color: var(--neutral--800);
+      font-weight: 500;
+
+      &:hover {
+        border-color: var(--accent--primary-1);
+        background-color: var(--accent--primary-1);
+        color: var(--neutral--100);
+      }
+    }
+  }
+
+  .register a {
+    border: 1px solid var(--accent--primary-1);
+    background-color: var(--accent--primary-1);
+    color: var(--neutral--100);
+    font-weight: 700;
+
+    &:hover {
+      border-color: var(--secondary--color-1);
+      background-color: var(--secondary--color-1);
+      color: var(--neutral--100);
+    }
+  }
+}
+
+.header-pages-icon {
+  margin-left: 4px;
+  font-size: 15px;
+  font-family: LineRoundedIcons, sans-serif;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.125em;
+  vertical-align: middle;
+}

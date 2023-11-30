@@ -29,18 +29,30 @@ const Header = () => {
               <img src={Logo} alt="Deliver X Webflow Template - Logo" />
             </a>
           </div>
-        </div>
 
-        <div className="header-nav-wrap">
-          <nav>
-            <ul>
-              <ListItem text="Home" />
-              <ListItem text="About" current />
-              <ListItem text="Pricing" />
-              <ListItem text="Pages" />
-            </ul>
-          </nav>
-          <div className="header-cart">Cart(0)</div>
+          <div className="header-nav-wrap">
+            <nav>
+              <ul>
+                <ListItem text="Home" />
+                <ListItem text="About" current />
+                <ListItem text="Pricing" />
+                <li>
+                  <a href="#">
+                    Pages<div className="header-pages-icon"></div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div className="header-cart">Cart(0)</div>
+            <div className="header-buttons">
+              <div className="download">
+                <a href="#">Download app</a>
+              </div>
+              <div className="register">
+                <a href="#">Register</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
