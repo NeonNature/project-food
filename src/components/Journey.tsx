@@ -9,11 +9,12 @@ interface JourneyCardProps {
   text: string
   title: string
   date: string
+  id: string
 }
 
-const JourneyCard = ({ text, title, date }: JourneyCardProps) => {
+const JourneyCard = ({ text, title, date, id }: JourneyCardProps) => {
   return (
-    <div className="journey-card-container">
+    <div className={`journey-card-container state-${id}`}>
       <div className="journey-card-date">{date}</div>
       <div className="journey-card-title">{title}</div>
       <div>{text}</div>
@@ -28,19 +29,61 @@ const Journey = () => {
     const element = ref.current
 
     if (element) {
-      // gsap.fromTo(
-      //   element.querySelectorAll('.mission-image-wrapper'),
-      //   {
-      //     scale: 0,
-      //   },
-      //   {
-      //     scale: 1,
-      //     duration: 0.5,
-      //     scrollTrigger: {
-      //       trigger: element.querySelector('.mission-grid'),
-      //     },
-      //   }
-      // )
+      gsap.fromTo(
+        element.querySelectorAll('.journey-card-container.state-1'),
+        {
+          scale: 0,
+        },
+        {
+          scale: 1,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element.querySelector('.journey-card-container.state-1'),
+          },
+        }
+      )
+
+      gsap.fromTo(
+        element.querySelectorAll('.journey-card-container.state-2'),
+        {
+          scale: 0,
+        },
+        {
+          scale: 1,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element.querySelector('.journey-card-container.state-2'),
+          },
+        }
+      )
+
+      gsap.fromTo(
+        element.querySelectorAll('.journey-card-container.state-3'),
+        {
+          scale: 0,
+        },
+        {
+          scale: 1,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element.querySelector('.journey-card-container.state-3'),
+          },
+        }
+      )
+
+      gsap.fromTo(
+        element.querySelectorAll('.journey-card-container.state-4'),
+        {
+          scale: 0,
+        },
+        {
+          scale: 1,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element.querySelector('.journey-card-container.state-4'),
+          },
+        }
+      )
     }
   }, [])
 
@@ -71,21 +114,25 @@ const Journey = () => {
           <div className="journey-roadmap">
             <div className="journey-roadmap-grid">
               <JourneyCard
+                id={1}
                 date="2016"
                 title="Deliver X was founded"
                 text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam."
               />
               <JourneyCard
+                id={2}
                 date="2018"
                 title="Raised Series A at $50M valuation"
                 text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam."
               />
               <JourneyCard
+                id={3}
                 date="2019"
                 title="Raised Series B at $600M valuation"
                 text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam."
               />
               <JourneyCard
+                id={4}
                 date="2022"
                 title="Raised Series C at $3B valuation"
                 text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam."
