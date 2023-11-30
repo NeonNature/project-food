@@ -168,3 +168,10 @@
   line-height: 1.125em;
   vertical-align: middle;
 }
+
+@media screen and (max-width: 991px) {
+  .header-nav-wrap,
+  .header-buttons {
+    display: none;
+  }
+}

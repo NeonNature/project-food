@@ -100,3 +100,24 @@
   margin-top: 100px;
   text-align: center;
 }
+
+@media screen and (max-width: 991px) {
+  .intro-grid {
+    grid-row-gap: 60px;
+    grid-template-columns: 1.25fr;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .intro-numbers-grid {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .intro-image-delivery {
+    right: -18px;
+  }
+}

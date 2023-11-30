@@ -36,3 +36,16 @@
   align-items: center;
   display: grid;
 }
+
+@media screen and (max-width: 991px) {
+  .mission-grid {
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mission-grid {
+    grid-row-gap: 50px;
+  }
+}

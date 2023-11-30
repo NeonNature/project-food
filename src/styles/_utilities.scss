@@ -51,3 +51,23 @@
 .content-bg {
   background-color: var(--neutral--200);
 }
+
+@media screen and (max-width: 991px) {
+  .content-header {
+    font-size: 52px !important;
+    margin-bottom: 10px;
+  }
+  .content-subheader {
+    margin-bottom: 12px;
+    font-size: 38px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content-header {
+    font-size: 43px !important;
+  }
+  .content-subheader {
+    font-size: 32px !important;
+  }
+}

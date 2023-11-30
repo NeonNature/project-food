@@ -37,3 +37,20 @@
   justify-self: end;
   max-width: 480px;
 }
+
+@media screen and (max-width: 991px) {
+  .about-grid {
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-grid {
+    grid-row-gap: 50px;
+  }
+}

@@ -2,7 +2,7 @@
 
 .news-container {
   @extend .content-container;
-  padding: 166px 0;
+  padding: 166px 24px;
 }
 
 .news-title {
@@ -95,5 +95,14 @@
 @media screen and (max-width: 991px) {
   .news-grid {
     grid-template-columns: 1fr;
+  }
+  .news-card {
+    padding: 68px 53px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news-card {
+    padding: 58px 34px;
   }
 }
