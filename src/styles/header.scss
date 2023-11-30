@@ -1,0 +1,108 @@
+@use 'utilities';
+
+.header-wrapper {
+  background-color: var(--neutral--100);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 12px rgba(18, 18, 18, 0.06);
+  z-index: 1000;
+}
+
+.header-content {
+  padding: 32px 24px;
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+.header-grid {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: static;
+}
+
+.header-logo {
+  align-items: center;
+  display: flex;
+
+  a {
+    max-width: 161px;
+    margin-right: 30px;
+    padding-left: 0;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale3d(0.95, 0.95, 1.01);
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+.header-nav-wrap {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+
+  nav {
+    float: right;
+    position: relative;
+
+    ul {
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style-type: none;
+      display: flex;
+
+      li {
+        align-items: center;
+        padding-left: 13px;
+        padding-right: 13px;
+        display: flex;
+        margin-bottom: 0;
+
+        a {
+          color: var(--neutral--800);
+          padding: 0;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.125em;
+          vertical-align: top;
+          text-align: left;
+          margin-left: auto;
+          margin-right: auto;
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          transition: color 0.3s;
+
+          &:hover,
+          &.current {
+            color: var(--accent--primary-1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-cart {
+  margin-left: 13px;
+  display: inline-block;
+  position: relative;
+  color: rgb(18, 18, 18);
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.125em;
+  cursor: pointer;
+  align-items: center;
+}

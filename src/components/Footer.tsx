@@ -1,5 +1,28 @@
 import '../styles/footer.scss'
 import Logo from '../assets/images/logo.svg'
+import Place1 from '../assets/images/place-1.svg'
+import Place2 from '../assets/images/place-2.svg'
+import Place3 from '../assets/images/place-3.svg'
+import Place4 from '../assets/images/place-4.svg'
+
+interface PlaceCardProps {
+  text: string
+  alt: string
+  image: string
+}
+
+const PlaceCard = ({ text, alt, image }: PlaceCardProps) => {
+  return (
+    <div className="place-card-container">
+      <div className="place-card-img">
+        <div>
+          <img src={image} alt={alt} />
+        </div>
+      </div>
+      <div className="place-card-text">{text}</div>
+    </div>
+  )
+}
 
 interface ListItemProps {
   text: string
@@ -90,6 +113,28 @@ const Footer = () => {
             </div>
             <div className="footer-nav-place">
               <div className="footer-nav-title">Available in</div>
+              <div className="footer-place-grid">
+                <PlaceCard
+                  image={Place1}
+                  alt="Illustration of San Francisco"
+                  text="San Francisco, CA"
+                />
+                <PlaceCard
+                  image={Place2}
+                  alt="Illustration of New York"
+                  text="New York, NY"
+                />
+                <PlaceCard
+                  image={Place3}
+                  alt="Illustration of Los Angeles"
+                  text="Los Angeles, CA"
+                />
+                <PlaceCard
+                  image={Place4}
+                  alt="Illustration of Seattle"
+                  text="Seattle, WA"
+                />
+              </div>
             </div>
           </div>
         </div>
